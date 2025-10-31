@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,14 +23,14 @@
             --radius: 12px;
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
             color: var(--dark);
@@ -37,13 +38,13 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-        
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
-        
+
         /* الترويسة */
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -56,7 +57,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         header::before {
             content: '';
             position: absolute;
@@ -67,32 +68,39 @@
             background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
             opacity: 0.1;
         }
-        
+
         .logo {
             font-size: 3rem;
             margin-bottom: 1rem;
             display: inline-block;
             animation: float 3s ease-in-out infinite;
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
-        
+
         h1 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
-        
+
         .subtitle {
             font-size: 1.1rem;
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
         }
-        
+
         /* تبديل اللغة */
         .lang-switcher {
             position: absolute;
@@ -105,7 +113,7 @@
             gap: 10px;
             backdrop-filter: blur(10px);
         }
-        
+
         .lang-btn {
             background: transparent;
             border: none;
@@ -116,11 +124,11 @@
             border-radius: 15px;
             transition: var(--transition);
         }
-        
+
         .lang-btn.active {
             background: rgba(255, 255, 255, 0.3);
         }
-        
+
         /* البطاقات */
         .card {
             background: white;
@@ -133,33 +141,34 @@
             transform: translateY(20px);
             animation: fadeInUp 0.6s forwards;
         }
-        
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
-        
+
         /* النماذج */
         .form-group {
             margin-bottom: 1.5rem;
             position: relative;
         }
-        
+
         label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
             color: var(--dark);
         }
-        
-        input, select {
+
+        input,
+        select {
             width: 100%;
             padding: 0.75rem 1rem;
             border: 1px solid #ddd;
@@ -167,13 +176,14 @@
             font-size: 1rem;
             transition: var(--transition);
         }
-        
-        input:focus, select:focus {
+
+        input:focus,
+        select:focus {
             outline: none;
             border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.2);
         }
-        
+
         .bmi-result {
             margin-top: 10px;
             padding: 10px;
@@ -185,33 +195,36 @@
             opacity: 0;
             transform: scale(0.9);
         }
-        
+
         .bmi-result.show {
             opacity: 1;
             transform: scale(1);
         }
-        
-        .bmi-underweight { 
-            color: #E74C3C; 
+
+        .bmi-underweight {
+            color: #E74C3C;
             background: #FDEDEC;
             border: 1px solid #FADBD8;
         }
-        .bmi-normal { 
-            color: var(--success); 
+
+        .bmi-normal {
+            color: var(--success);
             background: #EAFAF1;
             border: 1px solid #D5F5E3;
         }
-        .bmi-overweight { 
-            color: var(--warning); 
+
+        .bmi-overweight {
+            color: var(--warning);
             background: #FEF9E7;
             border: 1px solid #FCF3CF;
         }
-        .bmi-obese { 
-            color: var(--danger); 
+
+        .bmi-obese {
+            color: var(--danger);
             background: #FDEDEC;
             border: 1px solid #FADBD8;
         }
-        
+
         /* الأسئلة */
         .question {
             margin-bottom: 2rem;
@@ -219,12 +232,17 @@
             border-bottom: 1px solid #eee;
             animation: fadeIn 0.5s forwards;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        
+
         .question-number {
             display: inline-flex;
             align-items: center;
@@ -239,29 +257,29 @@
             font-weight: bold;
             box-shadow: 0 4px 6px rgba(46, 139, 87, 0.3);
         }
-        
+
         .question-text {
             font-weight: 600;
             margin-bottom: 1rem;
             font-size: 1.1rem;
             line-height: 1.5;
         }
-        
+
         .options {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
-        
+
         .option {
             flex: 1;
             min-width: 120px;
         }
-        
+
         .option input {
             display: none;
         }
-        
+
         .option label {
             display: block;
             padding: 0.75rem 1rem;
@@ -273,20 +291,20 @@
             transition: var(--transition);
             font-weight: normal;
         }
-        
-        .option input:checked + label {
+
+        .option input:checked+label {
             background: var(--primary);
             color: white;
             border-color: var(--primary);
             transform: scale(1.05);
             box-shadow: 0 4px 8px rgba(46, 139, 87, 0.3);
         }
-        
+
         .option label:hover {
             background: #e8f5e9;
             border-color: var(--primary-light);
         }
-        
+
         /* الأزرار */
         .btn {
             display: inline-flex;
@@ -306,49 +324,49 @@
             text-decoration: none;
             box-shadow: 0 4px 6px rgba(46, 139, 87, 0.3);
         }
-        
+
         .btn:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(46, 139, 87, 0.4);
         }
-        
+
         .btn:active {
             transform: translateY(0);
         }
-        
+
         .btn-block {
             display: flex;
             width: 100%;
         }
-        
+
         .btn-secondary {
             background: var(--secondary);
         }
-        
+
         .btn-secondary:hover {
             background: #3a6ea5;
         }
-        
+
         .btn-outline {
             background: transparent;
             color: var(--primary);
             border: 2px solid var(--primary);
         }
-        
+
         .btn-outline:hover {
             background: var(--primary);
             color: white;
         }
-        
+
         .btn-whatsapp {
             background: #25D366;
         }
-        
+
         .btn-whatsapp:hover {
             background: #128C7E;
         }
-        
+
         /* التذييل */
         footer {
             text-align: center;
@@ -358,29 +376,36 @@
             margin-top: 2rem;
             border-top: 1px solid #eee;
         }
-        
+
         /* التنقل بين الخطوات */
         .step {
             display: none;
             animation: slideIn 0.5s forwards;
         }
-        
+
         @keyframes slideIn {
-            from { opacity: 0; transform: translateX(20px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
-        
+
         .step.active {
             display: block;
         }
-        
+
         .navigation {
             display: flex;
             justify-content: space-between;
             margin-top: 2rem;
             gap: 15px;
         }
-        
+
         /* شريط التقدم */
         .progress-bar {
             height: 8px;
@@ -389,7 +414,7 @@
             margin-bottom: 2rem;
             overflow: hidden;
         }
-        
+
         .progress {
             height: 100%;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -397,37 +422,50 @@
             width: 0%;
             transition: width 0.5s ease;
         }
-        
+
         /* النتائج */
         .result-card {
             text-align: center;
             padding: 2rem;
         }
-        
+
         .result-icon {
             font-size: 5rem;
             margin-bottom: 1.5rem;
             animation: bounce 1s;
         }
-        
+
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-20px); }
-            60% { transform: translateY(-10px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
         }
-        
+
         .result-title {
             font-size: 1.8rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
-        
+
         .result-description {
             margin-bottom: 1.5rem;
             color: var(--gray);
             line-height: 1.7;
         }
-        
+
         .warning {
             background: #FFF3CD;
             border: 1px solid #FFEEBA;
@@ -438,13 +476,21 @@
             text-align: right;
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(243, 156, 18, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(243, 156, 18, 0);
+            }
         }
-        
+
         .result-details {
             background: var(--light);
             padding: 1.5rem;
@@ -452,29 +498,29 @@
             margin: 1.5rem 0;
             text-align: right;
         }
-        
+
         /* التجاوبية */
         @media (max-width: 768px) {
             .options {
                 flex-direction: column;
             }
-            
+
             .option {
                 min-width: 100%;
             }
-            
+
             h1 {
                 font-size: 1.6rem;
             }
-            
+
             .logo {
                 font-size: 2.5rem;
             }
-            
+
             .navigation {
                 flex-direction: column;
             }
-            
+
             .lang-switcher {
                 position: relative;
                 top: 0;
@@ -483,33 +529,33 @@
                 justify-content: center;
             }
         }
-        
+
         @media (max-width: 480px) {
             .container {
                 padding: 10px;
             }
-            
+
             .card {
                 padding: 1.5rem;
             }
-            
+
             .btn {
                 padding: 0.6rem 1.2rem;
             }
         }
-        
+
         /* تأثيرات دخول العناصر */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s, transform 0.6s;
         }
-        
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* تصميم الشريط الجانبي للمعلومات */
         .info-sidebar {
             position: fixed;
@@ -518,17 +564,17 @@
             width: 300px;
             height: 100%;
             background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             padding: 2rem;
             transition: var(--transition);
             z-index: 1000;
             overflow-y: auto;
         }
-        
+
         .info-sidebar.open {
             left: 0;
         }
-        
+
         .info-toggle {
             position: fixed;
             top: 20px;
@@ -543,32 +589,32 @@
             justify-content: center;
             cursor: pointer;
             z-index: 1001;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: var(--transition);
         }
-        
+
         .info-toggle:hover {
             transform: scale(1.1);
         }
-        
+
         .overlay {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 999;
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
         }
-        
+
         .overlay.active {
             opacity: 1;
             visibility: visible;
         }
-        
+
         /* تصميم المطور */
         .developer {
             margin-top: 1rem;
@@ -579,16 +625,18 @@
         }
     </style>
 </head>
+
 <body>
     <!-- شريط المعلومات الجانبي -->
     <div class="info-toggle" id="infoToggle">
         <i class="fas fa-info"></i>
     </div>
-    
+
     <div class="info-sidebar" id="infoSidebar">
         <h3>عن فحص BEDS-7</h3>
-        <p>هذا الفحص مصمم للكشف عن مؤشرات اضطراب نهم الطعام، وهو حالة طبية خطيرة تتميز بنوبات متكررة من تناول كميات كبيرة من الطعام مع شعور بفقدان السيطرة.</p>
-        
+        <p>هذا الفحص مصمم للكشف عن مؤشرات اضطراب نهم الطعام، وهو حالة طبية خطيرة تتميز بنوبات متكررة من تناول كميات
+            كبيرة من الطعام مع شعور بفقدان السيطرة.</p>
+
         <h4>كيفية الاستخدام:</h4>
         <ul>
             <li>أجب عن جميع الأسئلة بصدق</li>
@@ -596,7 +644,7 @@
             <li>هذا الفحص لأغراض التقييم الأولي فقط</li>
             <li>لا يستبدل التشخيص الطبي المتخصص</li>
         </ul>
-        
+
         <h4>مؤشر كتلة الجسم (BMI):</h4>
         <p>يحسب بقسمة الوزن (كجم) على مربع الطول (م).</p>
         <ul>
@@ -605,47 +653,53 @@
             <li>25 - 29.9: زيادة وزن</li>
             <li>30 فأكثر: سمنة</li>
         </ul>
-        
+
         <h4>الدعم الفني:</h4>
         <p>للاستفسارات التقنية أو المساعدة في استخدام الموقع، يرجى الاتصال بالدعم الفني:</p>
         <p><i class="fab fa-whatsapp"></i> واتساب: +201129724884</p>
-        
+
         <div class="developer">
             <p>تم التطوير بواسطة <strong>SAMIR MAGDY</strong></p>
         </div>
     </div>
-    
+
     <div class="overlay" id="overlay"></div>
-    
+
     <header>
         <div class="lang-switcher">
             <button class="lang-btn active" data-lang="ar">العربية</button>
             <button class="lang-btn" data-lang="en">English</button>
         </div>
-        
+
         <div class="logo">🥗</div>
-        <h1 data-ar="فحص اضطراب نهم الطعام (BEDS-7)" data-en="Binge Eating Disorder Screening (BEDS-7)">فحص اضطراب نهم الطعام (BEDS-7)</h1>
-        <p class="subtitle" data-ar="أداة فحص سريعة وبسيطة للكشف عن مؤشرات اضطراب نهم الطعام - للأغراض التقييمية فقط وليست تشخيصية نهائية" data-en="A quick and simple screening tool to detect signs of binge eating disorder - for assessment purposes only and not a definitive diagnosis">أداة فحص سريعة وبسيطة للكشف عن مؤشرات اضطراب نهم الطعام - للأغراض التقييمية فقط وليست تشخيصية نهائية</p>
+        <h1 data-ar="فحص اضطراب نهم الطعام (BEDS-7)" data-en="Binge Eating Disorder Screening (BEDS-7)">فحص اضطراب نهم
+            الطعام (BEDS-7)</h1>
+        <p class="subtitle"
+            data-ar="أداة فحص سريعة وبسيطة للكشف عن مؤشرات اضطراب نهم الطعام - للأغراض التقييمية فقط وليست تشخيصية نهائية"
+            data-en="A quick and simple screening tool to detect signs of binge eating disorder - for assessment purposes only and not a definitive diagnosis">
+            أداة فحص سريعة وبسيطة للكشف عن مؤشرات اضطراب نهم الطعام - للأغراض التقييمية فقط وليست تشخيصية نهائية</p>
     </header>
-    
+
     <div class="container">
         <!-- شريط التقدم -->
         <div class="progress-bar">
             <div class="progress" id="progressBar"></div>
         </div>
-        
+
         <!-- الخطوة 1: بيانات المستخدم -->
         <div class="step active" id="step1">
             <div class="card">
                 <h2 data-ar="البيانات الشخصية" data-en="Personal Information">البيانات الشخصية</h2>
-                <p data-ar="يرجى ملء البيانات التالية للمتابعة:" data-en="Please fill in the following information to proceed:">يرجى ملء البيانات التالية للمتابعة:</p>
-                
+                <p data-ar="يرجى ملء البيانات التالية للمتابعة:"
+                    data-en="Please fill in the following information to proceed:">يرجى ملء البيانات التالية للمتابعة:
+                </p>
+
                 <form id="userForm">
                     <div class="form-group">
                         <label for="name" data-ar="الاسم الكامل" data-en="Full Name">الاسم الكامل</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="gender" data-ar="الجنس" data-en="Gender">الجنس</label>
                         <select id="gender" name="gender" required>
@@ -654,19 +708,19 @@
                             <option value="female" data-ar="أنثى" data-en="Female">أنثى</option>
                         </select>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="height" data-ar="الطول (سم)" data-en="Height (cm)">الطول (سم)</label>
                         <input type="number" id="height" name="height" min="100" max="250" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="weight" data-ar="الوزن (كجم)" data-en="Weight (kg)">الوزن (كجم)</label>
                         <input type="number" id="weight" name="weight" min="30" max="300" required>
                     </div>
-                    
+
                     <div class="bmi-result" id="bmiResult"></div>
-                    
+
                     <button type="button" class="btn btn-block" onclick="nextStep(1, 2)">
                         <span data-ar="ابدأ الفحص" data-en="Start Screening">ابدأ الفحص</span>
                         <i class="fas fa-arrow-left"></i>
@@ -674,18 +728,25 @@
                 </form>
             </div>
         </div>
-        
+
         <!-- الخطوة 2: الأسئلة -->
         <div class="step" id="step2">
             <div class="card">
                 <h2 data-ar="أسئلة الفحص" data-en="Screening Questions">أسئلة الفحص</h2>
-                <p class="warning" data-ar="يرجى الإجابة على الأسئلة التالية بناءً على تجربتك خلال <strong>الثلاثة أشهر الماضية</strong>." data-en="Please answer the following questions based on your experience during the <strong>last 3 months</strong>.">يرجى الإجابة على الأسئلة التالية بناءً على تجربتك خلال <strong>الثلاثة أشهر الماضية</strong>.</p>
-                
+                <p class="warning"
+                    data-ar="يرجى الإجابة على الأسئلة التالية بناءً على تجربتك خلال <strong>الثلاثة أشهر الماضية</strong>."
+                    data-en="Please answer the following questions based on your experience during the <strong>last 3 months</strong>.">
+                    يرجى الإجابة على الأسئلة التالية بناءً على تجربتك خلال <strong>الثلاثة أشهر الماضية</strong>.</p>
+
                 <form id="screeningForm">
                     <!-- السؤال 1 -->
                     <div class="question" id="q1">
                         <div class="question-number">1</div>
-                        <div class="question-text" data-ar="خلال الأشهر الثلاثة الماضية، هل مررت بأي نوبات من الإفراط الشديد في تناول الطعام (أي تناول كمية أكبر بكثير مما يأكله معظم الناس في فترة مماثلة)؟" data-en="During the last 3 months, did you have any episodes of excessive overeating (i.e., eating significantly more than what most people would eat in a similar period of time)?">خلال الأشهر الثلاثة الماضية، هل مررت بأي نوبات من الإفراط الشديد في تناول الطعام (أي تناول كمية أكبر بكثير مما يأكله معظم الناس في فترة مماثلة)؟</div>
+                        <div class="question-text"
+                            data-ar="خلال الأشهر الثلاثة الماضية، هل مررت بأي نوبات من الإفراط الشديد في تناول الطعام (أي تناول كمية أكبر بكثير مما يأكله معظم الناس في فترة مماثلة)؟"
+                            data-en="During the last 3 months, did you have any episodes of excessive overeating (i.e., eating significantly more than what most people would eat in a similar period of time)?">
+                            خلال الأشهر الثلاثة الماضية، هل مررت بأي نوبات من الإفراط الشديد في تناول الطعام (أي تناول
+                            كمية أكبر بكثير مما يأكله معظم الناس في فترة مماثلة)؟</div>
                         <div class="options">
                             <div class="option">
                                 <input type="radio" id="q1_yes" name="q1" value="yes" onchange="handleQuestion1()">
@@ -697,13 +758,16 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- الأسئلة 2-7 (تظهر فقط إذا كانت الإجابة على السؤال 1 بنعم) -->
                     <div id="followupQuestions" style="display: none;">
                         <!-- السؤال 2 -->
                         <div class="question" id="q2">
                             <div class="question-number">2</div>
-                            <div class="question-text" data-ar="هل تشعر بالضيق بسبب نوبات الإفراط الشديد في تناول الطعام؟" data-en="Do you feel distressed about your episodes of excessive overeating?">هل تشعر بالضيق بسبب نوبات الإفراط الشديد في تناول الطعام؟</div>
+                            <div class="question-text"
+                                data-ar="هل تشعر بالضيق بسبب نوبات الإفراط الشديد في تناول الطعام؟"
+                                data-en="Do you feel distressed about your episodes of excessive overeating?">هل تشعر
+                                بالضيق بسبب نوبات الإفراط الشديد في تناول الطعام؟</div>
                             <div class="options">
                                 <div class="option">
                                     <input type="radio" id="q2_yes" name="q2" value="yes">
@@ -715,15 +779,21 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- الأسئلة 3-7 -->
                         <div class="question" id="q3">
                             <div class="question-number">3</div>
-                            <div class="question-text" data-ar="خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بأنك لا تملك أي سيطرة على تناول الطعام (على سبيل المثال، عدم القدرة على التوقف عن الأكل، أو الشعور بالإجبار على الأكل، أو العودة مراراً لتناول المزيد من الطعام)؟" data-en="During your episodes of excessive overeating, how often did you feel like you had no control over your eating (e.g., not being able to stop eating, feel compelled to eat, or going back and forth for more food)?">خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بأنك لا تملك أي سيطرة على تناول الطعام (على سبيل المثال، عدم القدرة على التوقف عن الأكل، أو الشعور بالإجبار على الأكل، أو العودة مراراً لتناول المزيد من الطعام)؟</div>
+                            <div class="question-text"
+                                data-ar="خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بأنك لا تملك أي سيطرة على تناول الطعام (على سبيل المثال، عدم القدرة على التوقف عن الأكل، أو الشعور بالإجبار على الأكل، أو العودة مراراً لتناول المزيد من الطعام)؟"
+                                data-en="During your episodes of excessive overeating, how often did you feel like you had no control over your eating (e.g., not being able to stop eating, feel compelled to eat, or going back and forth for more food)?">
+                                خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بأنك لا تملك أي سيطرة على تناول الطعام
+                                (على سبيل المثال، عدم القدرة على التوقف عن الأكل، أو الشعور بالإجبار على الأكل، أو
+                                العودة مراراً لتناول المزيد من الطعام)؟</div>
                             <div class="options">
                                 <div class="option">
                                     <input type="radio" id="q3_never" name="q3" value="never">
-                                    <label for="q3_never" data-ar="أبداً أو نادراً" data-en="Never or Rarely">أبداً أو نادراً</label>
+                                    <label for="q3_never" data-ar="أبداً أو نادراً" data-en="Never or Rarely">أبداً أو
+                                        نادراً</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q3_sometimes" name="q3" value="sometimes">
@@ -739,15 +809,20 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- السؤال 4 -->
                         <div class="question" id="q4">
                             <div class="question-number">4</div>
-                            <div class="question-text" data-ar="خلال نوبات الإفراط في تناول الطعام، كم مرة استمررت في الأكل على الرغم من أنك لم تكن جائعاً؟" data-en="During your episodes of excessive overeating, how often did you continue eating even though you were not hungry?">خلال نوبات الإفراط في تناول الطعام، كم مرة استمررت في الأكل على الرغم من أنك لم تكن جائعاً؟</div>
+                            <div class="question-text"
+                                data-ar="خلال نوبات الإفراط في تناول الطعام، كم مرة استمررت في الأكل على الرغم من أنك لم تكن جائعاً؟"
+                                data-en="During your episodes of excessive overeating, how often did you continue eating even though you were not hungry?">
+                                خلال نوبات الإفراط في تناول الطعام، كم مرة استمررت في الأكل على الرغم من أنك لم تكن
+                                جائعاً؟</div>
                             <div class="options">
                                 <div class="option">
                                     <input type="radio" id="q4_never" name="q4" value="never">
-                                    <label for="q4_never" data-ar="أبداً أو نادراً" data-en="Never or Rarely">أبداً أو نادراً</label>
+                                    <label for="q4_never" data-ar="أبداً أو نادراً" data-en="Never or Rarely">أبداً أو
+                                        نادراً</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q4_sometimes" name="q4" value="sometimes">
@@ -763,15 +838,20 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- السؤال 5 -->
                         <div class="question" id="q5">
                             <div class="question-number">5</div>
-                            <div class="question-text" data-ar="خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بالحرج من كمية الطعام التي تناولتها؟" data-en="During your episodes of excessive overeating, how often were you embarrassed by how much you ate?">خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بالحرج من كمية الطعام التي تناولتها؟</div>
+                            <div class="question-text"
+                                data-ar="خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بالحرج من كمية الطعام التي تناولتها؟"
+                                data-en="During your episodes of excessive overeating, how often were you embarrassed by how much you ate?">
+                                خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بالحرج من كمية الطعام التي تناولتها؟
+                            </div>
                             <div class="options">
                                 <div class="option">
                                     <input type="radio" id="q5_never" name="q5" value="never">
-                                    <label for="q5_never" data-ar="أبداً أو نادراً" data-en="Never or Rarely">أبداً أو نادراً</label>
+                                    <label for="q5_never" data-ar="أبداً أو نادراً" data-en="Never or Rarely">أبداً أو
+                                        نادراً</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q5_sometimes" name="q5" value="sometimes">
@@ -787,15 +867,20 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- السؤال 6 -->
                         <div class="question" id="q6">
                             <div class="question-number">6</div>
-                            <div class="question-text" data-ar="خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بالاشمئزاز من نفسك أو بالذنب بعد ذلك؟" data-en="During your episodes of excessive overeating, how often did you feel disgusted with yourself or guilty afterward?">خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بالاشمئزاز من نفسك أو بالذنب بعد ذلك？</div>
+                            <div class="question-text"
+                                data-ar="خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بالاشمئزاز من نفسك أو بالذنب بعد ذلك؟"
+                                data-en="During your episodes of excessive overeating, how often did you feel disgusted with yourself or guilty afterward?">
+                                خلال نوبات الإفراط في تناول الطعام، كم مرة شعرت بالاشمئزاز من نفسك أو بالذنب بعد ذلك？
+                            </div>
                             <div class="options">
                                 <div class="option">
                                     <input type="radio" id="q6_never" name="q6" value="never">
-                                    <label for="q6_never" data-ar="أبداً أو نادراً" data-en="Never or Rarely">أبداً أو نادراً</label>
+                                    <label for="q6_never" data-ar="أبداً أو نادراً" data-en="Never or Rarely">أبداً أو
+                                        نادراً</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q6_sometimes" name="q6" value="sometimes">
@@ -811,15 +896,20 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- السؤال 7 -->
                         <div class="question" id="q7">
                             <div class="question-number">7</div>
-                            <div class="question-text" data-ar="خلال الأشهر الثلاثة الماضية، كم مرة أجبرت نفسك على التقيؤ كوسيلة للتحكم في وزنك أو شكل جسمك؟" data-en="During the last 3 months, how often did you make yourself vomit as a means to control your weight or shape?">خلال الأشهر الثلاثة الماضية، كم مرة أجبرت نفسك على التقيؤ كوسيلة للتحكم في وزنك أو شكل جسمك؟</div>
+                            <div class="question-text"
+                                data-ar="خلال الأشهر الثلاثة الماضية، كم مرة أجبرت نفسك على التقيؤ كوسيلة للتحكم في وزنك أو شكل جسمك؟"
+                                data-en="During the last 3 months, how often did you make yourself vomit as a means to control your weight or shape?">
+                                خلال الأشهر الثلاثة الماضية، كم مرة أجبرت نفسك على التقيؤ كوسيلة للتحكم في وزنك أو شكل
+                                جسمك؟</div>
                             <div class="options">
                                 <div class="option">
                                     <input type="radio" id="q7_never" name="q7" value="never">
-                                    <label for="q7_never" data-ar="أبداً أو نادراً" data-en="Never or Rarely">أبداً أو نادراً</label>
+                                    <label for="q7_never" data-ar="أبداً أو نادراً" data-en="Never or Rarely">أبداً أو
+                                        نادراً</label>
                                 </div>
                                 <div class="option">
                                     <input type="radio" id="q7_sometimes" name="q7" value="sometimes">
@@ -836,7 +926,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="navigation">
                         <button type="button" class="btn btn-secondary" onclick="prevStep(2, 1)">
                             <i class="fas fa-arrow-right"></i>
@@ -850,37 +940,55 @@
                 </form>
             </div>
         </div>
-        
+
         <!-- الخطوة 3: النتائج -->
         <div class="step" id="step3">
             <div class="card result-card">
                 <div class="result-icon" id="resultIcon">📊</div>
-                <h2 class="result-title" id="resultTitle" data-ar="نتيجة الفحص" data-en="Screening Results">نتيجة الفحص</h2>
-                <p class="result-description" id="resultDescription" data-ar="سيتم عرض نتيجة الفحص هنا بناءً على إجاباتك." data-en="Your screening results will be displayed here based on your answers.">سيتم عرض نتيجة الفحص هنا بناءً على إجاباتك.</p>
-                
+                <h2 class="result-title" id="resultTitle" data-ar="نتيجة الفحص" data-en="Screening Results">نتيجة الفحص
+                </h2>
+                <p class="result-description" id="resultDescription"
+                    data-ar="سيتم عرض نتيجة الفحص هنا بناءً على إجاباتك."
+                    data-en="Your screening results will be displayed here based on your answers.">سيتم عرض نتيجة الفحص
+                    هنا بناءً على إجاباتك.</p>
+
                 <div class="result-details" id="resultDetails"></div>
-                
+
                 <div id="positiveResult" style="display: none;">
-                    <div class="warning" data-ar="<strong>ملاحظة هامة:</strong> بناءً على إجاباتك، قد تكون لديك مؤشرات لاضطراب نهم الطعام. يوصى باستشارة أخصائي تغذية أو طبيب نفسي للتقييم الدقيق." data-en="<strong>Important Note:</strong> Based on your answers, you may have indicators of binge eating disorder. It is recommended to consult a nutritionist or psychiatrist for an accurate assessment.">
-                        <strong>ملاحظة هامة:</strong> بناءً على إجاباتك، قد تكون لديك مؤشرات لاضطراب نهم الطعام. يوصى باستشارة أخصائي تغذية أو طبيب نفسي للتقييم الدقيق.
+                    <div class="warning"
+                        data-ar="<strong>ملاحظة هامة:</strong> بناءً على إجاباتك، قد تكون لديك مؤشرات لاضطراب نهم الطعام. يوصى باستشارة أخصائي تغذية أو طبيب نفسي للتقييم الدقيق."
+                        data-en="<strong>Important Note:</strong> Based on your answers, you may have indicators of binge eating disorder. It is recommended to consult a nutritionist or psychiatrist for an accurate assessment.">
+                        <strong>ملاحظة هامة:</strong> بناءً على إجاباتك، قد تكون لديك مؤشرات لاضطراب نهم الطعام. يوصى
+                        باستشارة أخصائي تغذية أو طبيب نفسي للتقييم الدقيق.
                     </div>
-                    <p data-ar="سيتم إرسال نتائجك إلى أخصائي التغذية للمتابعة." data-en="Your results will be sent to the nutritionist for follow-up.">سيتم إرسال نتائجك إلى أخصائي التغذية للمتابعة.</p>
+                    <p data-ar="سيتم إرسال نتائجك إلى أخصائي التغذية للمتابعة."
+                        data-en="Your results will be sent to the nutritionist for follow-up.">سيتم إرسال نتائجك إلى
+                        أخصائي التغذية للمتابعة.</p>
                     <button class="btn btn-block btn-whatsapp" onclick="sendToWhatsApp()">
                         <i class="fab fa-whatsapp"></i>
-                        <span data-ar="إرسال النتائج عبر واتساب" data-en="Send Results via WhatsApp">إرسال النتائج عبر واتساب</span>
+                        <span data-ar="إرسال النتائج عبر واتساب" data-en="Send Results via WhatsApp">إرسال النتائج عبر
+                            واتساب</span>
                     </button>
-                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--gray);" data-ar="سيتم فتح تطبيق واتساب مع الرقم: +201129724884" data-en="WhatsApp will open with number: +201129724884"></p>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--gray);"
+                        data-ar="سيتم فتح تطبيق واتساب مع الرقم: +201129724884"
+                        data-en="WhatsApp will open with number: +201129724884"></p>
                 </div>
-                
+
                 <div id="negativeResult" style="display: none;">
-                    <p data-ar="بناءً على إجاباتك، لا توجد مؤشرات قوية لاضطراب نهم الطعام. ومع ذلك، إذا كنت تشعر بأي قلق بشأن عاداتك الغذائية، ننصحك باستشارة أخصائي تغذية." data-en="Based on your answers, there are no strong indicators of binge eating disorder. However, if you have any concerns about your eating habits, we recommend consulting a nutritionist.">بناءً على إجاباتك، لا توجد مؤشرات قوية لاضطراب نهم الطعام. ومع ذلك، إذا كنت تشعر بأي قلق بشأن عاداتك الغذائية، ننصحك باستشارة أخصائي تغذية.</p>
+                    <p data-ar="بناءً على إجاباتك، لا توجد مؤشرات قوية لاضطراب نهم الطعام. ومع ذلك، إذا كنت تشعر بأي قلق بشأن عاداتك الغذائية، ننصحك باستشارة أخصائي تغذية."
+                        data-en="Based on your answers, there are no strong indicators of binge eating disorder. However, if you have any concerns about your eating habits, we recommend consulting a nutritionist.">
+                        بناءً على إجاباتك، لا توجد مؤشرات قوية لاضطراب نهم الطعام. ومع ذلك، إذا كنت تشعر بأي قلق بشأن
+                        عاداتك الغذائية، ننصحك باستشارة أخصائي تغذية.</p>
                     <button class="btn btn-block btn-whatsapp" onclick="sendToWhatsApp()">
                         <i class="fab fa-whatsapp"></i>
-                        <span data-ar="إرسال النتائج عبر واتساب" data-en="Send Results via WhatsApp">إرسال النتائج عبر واتساب</span>
+                        <span data-ar="إرسال النتائج عبر واتساب" data-en="Send Results via WhatsApp">إرسال النتائج عبر
+                            واتساب</span>
                     </button>
-                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--gray);" data-ar="سيتم فتح تطبيق واتساب مع الرقم: +201129724884" data-en="WhatsApp will open with number: +201129724884">سيتم فتح تطبيق واتساب </p>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--gray);"
+                        data-ar="سيتم فتح تطبيق واتساب مع الرقم: +201129724884"
+                        data-en="WhatsApp will open with number: +201129724884">سيتم فتح تطبيق واتساب </p>
                 </div>
-                
+
                 <div class="navigation" style="margin-top: 2rem;">
                     <button class="btn btn-outline" onclick="restartAssessment()">
                         <i class="fas fa-redo"></i>
@@ -890,13 +998,18 @@
             </div>
         </div>
     </div>
-    
+
     <footer>
-        <p data-ar="© 2025 مركز التغذية المتكامل. جميع الحقوق محفوظة." data-en="© 2023 Integrated Nutrition Center. All rights reserved.">© 2025 مركز التغذية المتكامل. جميع الحقوق محفوظة.</p>
-        <p data-ar="هذه الأداة للفحص الأولي فقط وليست بديلاً عن التشخيص الطبي المتخصص." data-en="This tool is for initial screening only and is not a substitute for specialized medical diagnosis.">هذه الأداة للفحص الأولي فقط وليست بديلاً عن التشخيص الطبي المتخصص.</p>
+        <p data-ar="© 2025 مركز التغذية المتكامل. جميع الحقوق محفوظة."
+            data-en="© 2025 Integrated Nutrition Center. All rights reserved.">© 2025 مركز التغذية المتكامل. جميع الحقوق
+            محفوظة.</p>
+        <p data-ar="هذه الأداة للفحص الأولي فقط وليست بديلاً عن التشخيص الطبي المتخصص."
+            data-en="This tool is for initial screening only and is not a substitute for specialized medical diagnosis.">
+            هذه الأداة للفحص الأولي فقط وليست بديلاً عن التشخيص الطبي المتخصص.</p>
         <!-- <p><i class="fab fa-whatsapp"></i> <span data-ar="واتساب:" data-en="WhatsApp:"></span></p> -->
         <div class="developer">
-            <p data-ar="تم التطوير بواسطة <strong>SAMIR MAGDY</strong>" data-en="Developed by <strong>SAMIR MAGDY</strong>">تم التطوير بواسطة <strong>SAMIR MAGDY</strong></p>
+            <p data-ar="تم التطوير بواسطة سمير مجدى" data-en="Developed by SAMIR MAGDY">تم التطوير بواسطة SAMIR MAGDY
+            </p>
         </div>
     </footer>
 
@@ -906,50 +1019,50 @@
         let screeningResults = {};
         let currentLang = 'ar';
         const whatsappNumber = "201129724884"; // تم إزالة علامة + لتصحيح المشكلة
-        
+
         // تهيئة الموقع
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // تحديث شريط التقدم
             updateProgressBar();
-            
+
             // إضافة مستمعي الأحداث لحساب مؤشر كتلة الجسم
             document.getElementById('height').addEventListener('input', calculateBMI);
             document.getElementById('weight').addEventListener('input', calculateBMI);
-            
+
             // إعداد تبديل اللغة
             setupLanguageSwitcher();
-            
+
             // إعداد شريط المعلومات
             setupInfoSidebar();
-            
+
             // إضافة تأثيرات الدخول للعناصر
             setupScrollAnimations();
         });
-        
+
         // إعداد تبديل اللغة
         function setupLanguageSwitcher() {
             const langButtons = document.querySelectorAll('.lang-btn');
-            
+
             langButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function () {
                     const lang = this.getAttribute('data-lang');
                     switchLanguage(lang);
-                    
+
                     // تحديث حالة الأزرار
                     langButtons.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
                 });
             });
         }
-        
+
         // تبديل اللغة
         function switchLanguage(lang) {
             currentLang = lang;
-            
+
             // تغيير اتجاه الصفحة
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
             document.documentElement.lang = lang;
-            
+
             // تحديث النصوص
             document.querySelectorAll('[data-ar]').forEach(element => {
                 if (lang === 'ar') {
@@ -958,38 +1071,38 @@
                     element.textContent = element.getAttribute('data-en');
                 }
             });
-            
+
             // تحديث النصوص في العناصر الخاصة
             document.querySelectorAll('input[placeholder]').forEach(input => {
                 if (input.hasAttribute('data-ar-placeholder')) {
-                    input.placeholder = lang === 'ar' ? 
-                        input.getAttribute('data-ar-placeholder') : 
+                    input.placeholder = lang === 'ar' ?
+                        input.getAttribute('data-ar-placeholder') :
                         input.getAttribute('data-en-placeholder');
                 }
             });
         }
-        
+
         // إعداد شريط المعلومات
         function setupInfoSidebar() {
             const infoToggle = document.getElementById('infoToggle');
             const infoSidebar = document.getElementById('infoSidebar');
             const overlay = document.getElementById('overlay');
-            
-            infoToggle.addEventListener('click', function() {
+
+            infoToggle.addEventListener('click', function () {
                 infoSidebar.classList.toggle('open');
                 overlay.classList.toggle('active');
             });
-            
-            overlay.addEventListener('click', function() {
+
+            overlay.addEventListener('click', function () {
                 infoSidebar.classList.remove('open');
                 overlay.classList.remove('active');
             });
         }
-        
+
         // إعداد تأثيرات التمرير
         function setupScrollAnimations() {
             const fadeElements = document.querySelectorAll('.fade-in');
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -997,27 +1110,27 @@
                     }
                 });
             }, { threshold: 0.1 });
-            
+
             fadeElements.forEach(el => observer.observe(el));
         }
-        
+
         // تحديث شريط التقدم
         function updateProgressBar() {
             const steps = document.querySelectorAll('.step');
             const activeStep = document.querySelector('.step.active');
             const progressBar = document.getElementById('progressBar');
-            
+
             let activeIndex = 0;
             steps.forEach((step, index) => {
                 if (step === activeStep) {
                     activeIndex = index;
                 }
             });
-            
+
             const progress = ((activeIndex + 1) / steps.length) * 100;
             progressBar.style.width = `${progress}%`;
         }
-        
+
         // التنقل بين الخطوات
         function nextStep(current, next) {
             // التحقق من صحة البيانات في الخطوة 1
@@ -1026,12 +1139,12 @@
                 const gender = document.getElementById('gender').value;
                 const height = document.getElementById('height').value;
                 const weight = document.getElementById('weight').value;
-                
+
                 if (!name || !gender || !height || !weight) {
                     alert(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة' : 'Please fill in all required fields');
                     return;
                 }
-                
+
                 userData = {
                     name: name,
                     gender: gender,
@@ -1040,36 +1153,36 @@
                     bmi: calculateBMI()
                 };
             }
-            
+
             document.getElementById(`step${current}`).classList.remove('active');
             document.getElementById(`step${next}`).classList.add('active');
             updateProgressBar();
         }
-        
+
         function prevStep(current, prev) {
             document.getElementById(`step${current}`).classList.remove('active');
             document.getElementById(`step${prev}`).classList.add('active');
             updateProgressBar();
         }
-        
+
         // حساب مؤشر كتلة الجسم
         function calculateBMI() {
             const height = parseFloat(document.getElementById('height').value);
             const weight = parseFloat(document.getElementById('weight').value);
             const bmiResult = document.getElementById('bmiResult');
-            
+
             if (!height || !weight || height < 100 || weight < 30) {
                 bmiResult.classList.remove('show');
                 return null;
             }
-            
+
             // تحويل الطول من سم إلى متر
             const heightInMeters = height / 100;
-            
+
             // حساب مؤشر كتلة الجسم
             const bmi = weight / (heightInMeters * heightInMeters);
             const roundedBMI = bmi.toFixed(1);
-            
+
             // تحديد فئة مؤشر كتلة الجسم
             let category, categoryClass;
             if (bmi < 18.5) {
@@ -1085,14 +1198,14 @@
                 category = currentLang === 'ar' ? 'سمنة' : 'Obesity';
                 categoryClass = 'bmi-obese';
             }
-            
+
             // عرض النتيجة
             bmiResult.innerHTML = `
                 <span>${currentLang === 'ar' ? 'مؤشر كتلة الجسم:' : 'BMI:'} ${roundedBMI}</span>
                 <span class="${categoryClass}">(${category})</span>
             `;
             bmiResult.classList.add('show');
-            
+
             return {
                 value: roundedBMI,
                 category: category,
@@ -1100,15 +1213,15 @@
                 isUnderweight: bmi < 18.5
             };
         }
-        
+
         // التعامل مع السؤال 1
         function handleQuestion1() {
             const q1Yes = document.getElementById('q1_yes').checked;
             const followupQuestions = document.getElementById('followupQuestions');
-            
+
             if (q1Yes) {
                 followupQuestions.style.display = 'block';
-                
+
                 // إضافة تأثير ظهور للأسئلة
                 const questions = followupQuestions.querySelectorAll('.question');
                 questions.forEach((question, index) => {
@@ -1116,26 +1229,26 @@
                 });
             } else {
                 followupQuestions.style.display = 'none';
-                
+
                 // إذا كانت الإجابة "لا" على السؤال 1، يمكن تقديم النتائج مباشرة
                 setTimeout(() => {
                     showResults(false);
                 }, 500);
             }
         }
-        
+
         // تقديم النموذج وعرض النتائج
         function submitForm() {
             // جمع إجابات الأسئلة
             const q1 = document.querySelector('input[name="q1"]:checked');
-            
+
             if (!q1) {
                 alert(currentLang === 'ar' ? 'يرجى الإجابة على السؤال الأول' : 'Please answer the first question');
                 return;
             }
-            
+
             screeningResults.q1 = q1.value;
-            
+
             // إذا كانت الإجابة بنعم على السؤال 1، جمع باقي الإجابات
             if (q1.value === 'yes') {
                 const q2 = document.querySelector('input[name="q2"]:checked');
@@ -1144,19 +1257,19 @@
                 const q5 = document.querySelector('input[name="q5"]:checked');
                 const q6 = document.querySelector('input[name="q6"]:checked');
                 const q7 = document.querySelector('input[name="q7"]:checked');
-                
+
                 if (!q2 || !q3 || !q4 || !q5 || !q6 || !q7) {
                     alert(currentLang === 'ar' ? 'يرجى الإجابة على جميع الأسئلة' : 'Please answer all questions');
                     return;
                 }
-                
+
                 screeningResults.q2 = q2.value;
                 screeningResults.q3 = q3.value;
                 screeningResults.q4 = q4.value;
                 screeningResults.q5 = q5.value;
                 screeningResults.q6 = q6.value;
                 screeningResults.q7 = q7.value;
-                
+
                 // تحليل النتائج
                 const hasBEDIndicators = analyzeResults();
                 showResults(hasBEDIndicators);
@@ -1164,36 +1277,36 @@
                 showResults(false);
             }
         }
-        
+
         // تحليل النتائج
         function analyzeResults() {
             // وفقًا لمعايير BEDS-7، يشير الفحص الإيجابي إلى:
             // 1. الإجابة بنعم على السؤال 1 (وجود نوبات الإفراط)
             // 2. الإجابة بنعم على السؤال 2 (الشعور بالضيق)
             // 3. الإجابة بـ "أحياناً" أو أكثر على الأسئلة 3-7
-            
+
             if (screeningResults.q1 !== 'yes' || screeningResults.q2 !== 'yes') {
                 return false;
             }
-            
+
             const significantAnswers = ['sometimes', 'often', 'always'];
-            
+
             if (!significantAnswers.includes(screeningResults.q3) ||
                 !significantAnswers.includes(screeningResults.q4) ||
                 !significantAnswers.includes(screeningResults.q5) ||
                 !significantAnswers.includes(screeningResults.q6)) {
                 return false;
             }
-            
+
             // السؤال 7 (التقيؤ) - إذا كانت الإجابة "غالباً" أو "دائمًا"، قد يشير ذلك إلى اضطراب آخر
             if (screeningResults.q7 === 'often' || screeningResults.q7 === 'always') {
                 // يمكن اعتبار ذلك مؤشرًا إيجابيًا مع ملاحظة خاصة
                 return true;
             }
-            
+
             return true;
         }
-        
+
         // عرض النتائج
         function showResults(hasIndicators) {
             const resultIcon = document.getElementById('resultIcon');
@@ -1202,51 +1315,51 @@
             const resultDetails = document.getElementById('resultDetails');
             const positiveResult = document.getElementById('positiveResult');
             const negativeResult = document.getElementById('negativeResult');
-            
+
             // حساب مؤشر كتلة الجسم إذا لم يكن محسوبًا بالفعل
             if (!userData.bmi) {
                 userData.bmi = calculateBMI();
             }
-            
+
             if (hasIndicators) {
                 resultIcon.textContent = '⚠️';
                 resultTitle.textContent = currentLang === 'ar' ? 'يوجد مؤشرات تستدعي المتابعة' : 'Indicators Requiring Follow-up';
-                resultDescription.textContent = currentLang === 'ar' ? 
+                resultDescription.textContent = currentLang === 'ar' ?
                     'بناءً على إجاباتك، قد تكون هناك مؤشرات لاضطراب نهم الطعام. يوصى باستشارة أخصائي تغذية أو طبيب نفسي للتقييم الدقيق.' :
                     'Based on your answers, there may be indicators of binge eating disorder. It is recommended to consult a nutritionist or psychiatrist for an accurate assessment.';
-                
+
                 // تفاصيل النتائج
                 resultDetails.innerHTML = `
                     <h4>${currentLang === 'ar' ? 'تفاصيل النتائج:' : 'Result Details:'}</h4>
                     <p>${currentLang === 'ar' ? 'مؤشر كتلة الجسم:' : 'BMI:'} ${userData.bmi.value} (${userData.bmi.category})</p>
                     <p>${currentLang === 'ar' ? 'النتيجة الإجمالية:' : 'Overall Result:'} ${currentLang === 'ar' ? 'توجد مؤشرات لاضطراب نهم الطعام' : 'Indicators of binge eating disorder present'}</p>
                 `;
-                
+
                 positiveResult.style.display = 'block';
                 negativeResult.style.display = 'none';
             } else {
                 resultIcon.textContent = '✅';
                 resultTitle.textContent = currentLang === 'ar' ? 'لا توجد مؤشرات واضحة' : 'No Clear Indicators';
-                resultDescription.textContent = currentLang === 'ar' ? 
+                resultDescription.textContent = currentLang === 'ar' ?
                     'بناءً على إجاباتك، لا توجد مؤشرات قوية لاضطراب نهم الطعام. ومع ذلك، إذا كنت تشعر بأي قلق بشأن عاداتك الغذائية، ننصحك باستشارة أخصائي تغذية.' :
                     'Based on your answers, there are no strong indicators of binge eating disorder. However, if you have any concerns about your eating habits, we recommend consulting a nutritionist.';
-                
+
                 // تفاصيل النتائج
                 resultDetails.innerHTML = `
                     <h4>${currentLang === 'ar' ? 'تفاصيل النتائج:' : 'Result Details:'}</h4>
                     <p>${currentLang === 'ar' ? 'مؤشر كتلة الجسم:' : 'BMI:'} ${userData.bmi.value} (${userData.bmi.category})</p>
                     <p>${currentLang === 'ar' ? 'النتيجة الإجمالية:' : 'Overall Result:'} ${currentLang === 'ar' ? 'لا توجد مؤشرات واضحة لاضطراب نهم الطعام' : 'No clear indicators of binge eating disorder'}</p>
                 `;
-                
+
                 positiveResult.style.display = 'none';
                 negativeResult.style.display = 'block';
             }
-            
+
             document.getElementById('step2').classList.remove('active');
             document.getElementById('step3').classList.add('active');
             updateProgressBar();
         }
-        
+
         // إرسال النتائج عبر واتساب
         function sendToWhatsApp() {
             // تحضير نص الرسالة
@@ -1257,10 +1370,10 @@
             message += `${currentLang === 'ar' ? 'الوزن:' : 'Weight:'} ${userData.weight} ${currentLang === 'ar' ? 'كجم' : 'kg'}\n`;
             message += `${currentLang === 'ar' ? 'مؤشر كتلة الجسم:' : 'BMI:'} ${userData.bmi.value} (${userData.bmi.category})\n\n`;
             message += `${currentLang === 'ar' ? 'نتيجة الفحص:' : 'Screening Results:'}\n`;
-            
+
             // إضافة إجابات الأسئلة
             message += `1. ${currentLang === 'ar' ? 'نوبات الإفراط في الطعام:' : 'Binge eating episodes:'} ${screeningResults.q1 === 'yes' ? (currentLang === 'ar' ? 'نعم' : 'Yes') : (currentLang === 'ar' ? 'لا' : 'No')}\n`;
-            
+
             if (screeningResults.q1 === 'yes') {
                 message += `2. ${currentLang === 'ar' ? 'الشعور بالضيق:' : 'Distress about episodes:'} ${screeningResults.q2 === 'yes' ? (currentLang === 'ar' ? 'نعم' : 'Yes') : (currentLang === 'ar' ? 'لا' : 'No')}\n`;
                 message += `3. ${currentLang === 'ar' ? 'فقدان السيطرة:' : 'Loss of control:'} ${getAnswerText(screeningResults.q3)}\n`;
@@ -1269,21 +1382,21 @@
                 message += `6. ${currentLang === 'ar' ? 'الشعور بالذنب:' : 'Guilt:'} ${getAnswerText(screeningResults.q6)}\n`;
                 message += `7. ${currentLang === 'ar' ? 'التقيؤ المتعمد:' : 'Self-induced vomiting:'} ${getAnswerText(screeningResults.q7)}\n`;
             }
-            
+
             message += `\n${currentLang === 'ar' ? 'يرجى المتابعة مع هذا المريض.' : 'Please follow up with this patient.'}`;
-            
+
             // ترميز النص لرابط واتساب
             const encodedMessage = encodeURIComponent(message);
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-            
+
             // فتح رابط واتساب
             window.open(whatsappURL, '_blank');
         }
-        
+
         // تحويل قيمة الإجابة إلى نص
         function getAnswerText(value) {
             if (currentLang === 'ar') {
-                switch(value) {
+                switch (value) {
                     case 'never': return 'أبداً أو نادراً';
                     case 'sometimes': return 'أحياناً';
                     case 'often': return 'غالباً';
@@ -1293,7 +1406,7 @@
                     default: return value;
                 }
             } else {
-                switch(value) {
+                switch (value) {
                     case 'never': return 'Never or Rarely';
                     case 'sometimes': return 'Sometimes';
                     case 'often': return 'Often';
@@ -1304,30 +1417,31 @@
                 }
             }
         }
-        
+
         // إعادة بدء الفحص
         function restartAssessment() {
             // إعادة تعيين النماذج
             document.getElementById('userForm').reset();
             document.getElementById('screeningForm').reset();
-            
+
             // إخفاء الأسئلة التابعة
             document.getElementById('followupQuestions').style.display = 'none';
-            
+
             // إخفاء نتيجة مؤشر كتلة الجسم
             document.getElementById('bmiResult').classList.remove('show');
-            
+
             // العودة إلى الخطوة الأولى
             document.getElementById('step3').classList.remove('active');
             document.getElementById('step1').classList.add('active');
-            
+
             // تحديث شريط التقدم
             updateProgressBar();
-            
+
             // إعادة تعيين البيانات
             userData = {};
             screeningResults = {};
         }
     </script>
 </body>
+
 </html>
